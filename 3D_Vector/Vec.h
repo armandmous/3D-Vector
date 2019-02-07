@@ -38,38 +38,31 @@ public:
         y = Y;
         z = Z;
     }
-    void setX(double X){
-        x = X;
-    }
-    void setY(double Y){
-        y = Y;
-    }
-    void setZ(double Z){
-        z = Z;
-    }
+    void setX(double X){    x = X;    }
+    void setY(double Y){    y = Y;    }
+    void setZ(double Z){    z = Z;    }
     
     // Accessors
-    double getX(){
-        return x;
-    }
-    double getY(){
-        return y;
-    }
-    double getZ(){
-        return z;
-    }
-    
-    double getSize(){
-        return 3;
-    }
+    double getX(){  return x;    }
+    double getY(){  return y;    }
+    double getZ(){  return z;    }
+    double getSize(){   return 3;}
     double getLength();
     
     // Display functions
     void printVectorInfo();
     
+    Vec crossProduct(Vec vec1, Vec vec2);
+    int dotProduct(Vec vec1, Vec vec2);
+    double distance(Vec vec1, Vec vec2);
+    Vec combineVectors(Vec vec1, Vec vec2);
+    double compBA(Vec a, Vec b);
+    Vec projBA(Vec a, Vec b);
+    
     // Overload operators
     Vec operator * (const Vec &);
     Vec operator + (const Vec &);
+    
     Vec operator - (const Vec &);
     Vec operator / (const Vec &);
 };

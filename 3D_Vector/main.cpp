@@ -51,6 +51,34 @@ int main() {
     cout << "\tvec3 length is : " << vec3.getLength() << endl;
     cout << "\tvec3 size is   : " << vec1.getSize() << "\n" << endl;
     
+    // cross product
+    Vec v1(6,0,-2);
+    Vec v2(4,3,7);
+    Vec v3 = v3.crossProduct(v1,v2);
+    v3.printVectorInfo();
+    
+    Vec v4(6,0,-2);
+    Vec v5(-2,5,4);
+    Vec v6 = v6.crossProduct(v4,v5);
+    v6.printVectorInfo();
+    
+    Vec v7(-2,5,4);
+    Vec v8(4,3,7);
+    Vec v9 = v9.crossProduct(v7,v8);
+    v9.printVectorInfo();
+    
+    // distance
+    Vec v10(6,0,-2);
+    Vec v11(4,3,7);
+    Vec PQ = PQ.combineVectors(v10, v11);
+    PQ.printVectorInfo();
+    
+    // Scalar projection
+    Vec a(-2,3,1);
+    Vec b(1,1,2);
+    double c = a.compBA(a,b);
+    cout << "C is: " << c << endl;
+    
     cout << "\nprocess finished!!" << endl;
     
     return 0;
